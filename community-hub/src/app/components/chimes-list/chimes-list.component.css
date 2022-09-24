@@ -1,0 +1,9 @@
+.chime-card {
+    background-image: url("../../../assets/images/4853433.jpg");
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.chime-title {
+    font-size: 1.5em;
+}

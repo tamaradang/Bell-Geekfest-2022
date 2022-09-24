@@ -1,0 +1,27 @@
+<div class="row mb-3">
+    <div class="col-md-12">
+        <button class="btn btn-sm btn-danger" routerLink="/add">
+            Send a chime
+        </button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h4>Chimes List</h4>
+
+        <div class="row">
+            <div class="col-md-4 chime-card m-2" *ngFor="let chime of chimes; let i = index"
+                [class.active]="i == currentIndex">
+                <div class="chime-title">{{ chime.title }}</div>
+                <div>
+                    {{ chime.description }}
+                </div>
+                <div class="mt-2">
+                    To: {{ chime.recipient }}<br />
+                    From: {{ chime.author }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

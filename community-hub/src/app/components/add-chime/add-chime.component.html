@@ -1,0 +1,37 @@
+<div>
+    <div class="submit-form">
+        <div *ngIf="!submitted">
+            <h4>Send a Chime</h4>
+            <div class="form-group">
+                <label for="recipient">To:</label>
+                <input type="text" class="form-control" id="recipient" required [(ngModel)]="chime.recipient"
+                    name="recipient" />
+            </div>
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" required [(ngModel)]="chime.title" name="title" />
+            </div>
+
+            <div class="form-group">
+                <label for="description">Message</label>
+                <textarea rows="5" class="form-control" id="description" required [(ngModel)]="chime.description"
+                    name="description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="author">From:</label>
+                <input type="text" class="form-control" id="author" required [(ngModel)]="chime.author" name="author" />
+            </div>
+
+            <button (click)="saveChime()" class="btn btn-success mt-1">Submit</button>
+        </div>
+
+        <div *ngIf="submitted">
+            <h4>Chime was submitted successfully!</h4>
+
+            <button class="btn btn-success me-1" routerLink="/chimes">View all chimes</button>
+            <button class="btn btn-success" (click)="newChime()">Add new chime</button>
+        </div>
+    </div>
+</div>
